@@ -1,4 +1,3 @@
-
 def split_numbers(str):
     digit,nodigit,f, num = [],"", False, 0
     for i in str:
@@ -20,6 +19,7 @@ def capitalize(str):
     str, result = str.title(), ""
     for word in str.split():
         result += word[:-1] + word[-1].upper() + " "
+    print (result)    
     return result
 
 
@@ -31,7 +31,12 @@ print(words)
     
 words = capitalize(words);
 
-max_num = max(numbers)
-numbers_pow = numbers
-numbers_pow.remove(max_num)
-numbers_pow = [x ** i for i, x in enumerate(numbers_pow)]
+if numbers:
+    max_num = max(numbers)
+    numbers_pow = numbers
+    numbers_pow.remove(max_num)
+    numbers_pow = [x ** i for i, x in enumerate(numbers_pow)]
+    print ("Max num is: ", max_num)
+    print ("Numbers to its power: ", numbers_pow)
+
+
